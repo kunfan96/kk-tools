@@ -1,32 +1,29 @@
 import babel from "rollup-plugin-babel";
 import rpt from '@rollup/plugin-typescript';
 
-export default  [
+const buildTarget = [
     {
+        name: "kk-tools-umd",
+        file: "dist/kk-tools-umd.js",
+        format: "umd",
+    },
+    {
+        file: "dist/kk-tools.js",
+        format: "es",
+    }
+]
+
+const buildResult = buildTarget.map(item => {
+    return {
         input: "src/packages/index.ts",
-        output: {
-            name: "kk-tools-umd",
-            file: "dist/kk-tools-umd.js",
-            format: "umd",
-        },
+        output: item,
         plugins: [
             babel({
                 exclude:  "node_modules/**",
             }),
             rpt(),
         ],
-  },
-    {
-        input: "src/packages/index.ts",
-        output: {
-            file: "dist/kk-tools.js",
-            format: "es",
-        },
-        plugins: [
-            babel({
-                exclude:  "node_modules/**", 
-            }),
-            rpt(),
-        ],
     }
-]
+})
+
+export default  buildResult
