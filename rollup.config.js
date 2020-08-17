@@ -1,27 +1,25 @@
 import babel from "rollup-plugin-babel";
 import rpt from '@rollup/plugin-typescript';
+import { uglify } from "rollup-plugin-uglify"
 
-const buildTarget = [
+const targetOptions = [
     {
-        name: "kk-tools-umd",
-        file: "dist/kk-tools-umd.js",
+        name: "kk-tools",
+        file: "lib/index.js",
         format: "umd",
-    },
-    {
-        file: "dist/kk-tools.js",
-        format: "es",
     }
 ]
 
-const buildResult = buildTarget.map(item => {
+const buildResult = targetOptions.map(target => {
     return {
         input: "src/packages/index.ts",
-        output: item,
+        output: target,
         plugins: [
             babel({
                 exclude:  "node_modules/**",
             }),
             rpt(),
+            uglify(),
         ],
     }
 })

@@ -3,8 +3,9 @@
  * @params value any
  * 
  */
-const _fill = (array: Array<any>, value: Number = 0, start:Number = 0, end:Number = 0) => {
-        console.log(`${array}`)
+
+const _fill = <T>(initialValue: Array<T>, value: Number, start:Number, end:Number):Array<T> => {
+    return initialValue
 }
 
 export default _fill
