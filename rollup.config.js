@@ -6,7 +6,7 @@ const targetOptions = [
     {
         name: "kk-tools",
         file: "lib/index.js",
-        format: "umd",
+        format: "cjs",
     }
 ]
 
