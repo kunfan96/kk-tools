@@ -1,3 +1,1 @@
-declare kk-tools{
-    export { fill } from './fill'
-}
+export function fill<T>(array: Array<T>, value: any, start?:number, end?:number):Array<T>

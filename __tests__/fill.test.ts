@@ -1,4 +1,6 @@
-import { fill } from '../src'
+import _ from '../src'
+
+const { fill } = _
 
 describe('test fill component', () => {
     const initValue = [1, 2, 3, 4]

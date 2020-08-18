@@ -1,5 +1,5 @@
 import fill from './packages/fill'
 
-export {
+export default {
     fill
 }
