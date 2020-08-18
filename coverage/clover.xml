@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1597674584570" clover="3.2.0">
-  <project timestamp="1597674584570" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1597738143675" clover="3.2.0">
+  <project timestamp="1597738143676" name="All files">
+    <metrics statements="13" coveredstatements="13" conditionals="18" coveredconditionals="18" methods="2" coveredmethods="2" elements="33" coveredelements="33" complexity="0" loc="13" ncloc="13" packages="2" files="2" classes="2"/>
+    <package name="src">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="D:\github_code\kk-tools\src\index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.packages">
+      <metrics statements="11" coveredstatements="11" conditionals="18" coveredconditionals="18" methods="2" coveredmethods="2"/>
+      <file name="fill.ts" path="D:\github_code\kk-tools\src\packages\fill.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="18" coveredconditionals="18" methods="2" coveredmethods="2"/>
+        <line num="11" count="12" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="9" type="stmt"/>
+        <line num="25" count="9" type="stmt"/>
+        <line num="26" count="36" type="cond" truecount="4" falsecount="0"/>
+        <line num="28" count="9" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

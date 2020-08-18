@@ -12,7 +12,7 @@ const targetOptions = [
 
 const buildResult = targetOptions.map(target => {
     return {
-        input: "src/packages/index.ts",
+        input: "src/index.ts",
         output: target,
         plugins: [
             babel({
