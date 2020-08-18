@@ -1,6 +1,8 @@
 {
     "name": "kk-tools",
-    "version": "0.0.1",
+    "version": "0.0.2",
+    "author": "kunfan96",
+    "description": "The library like lodash with typescript",
     "keywords": [
         "lodash",
         "tools-function",
@@ -9,7 +11,8 @@
     "scripts": {
         "build": "npm run test && npm run build-only",
         "build-only": "rollup --config",
-        "test": "jest --config ./jest.config.js"
+        "test": "jest --config ./jest.config.js",
+        "publish": "npm publish --access=public"
     },
     "types": "./types/*.d.ts",
     "main": "./lib/index.js",
