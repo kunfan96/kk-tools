@@ -12,7 +12,8 @@
         "build": "npm run test && npm run build-only",
         "build-only": "rollup --config",
         "test": "jest --config ./jest.config.js",
-        "publish": "npm run build && npm version && npm publish --access=public"
+        "publish-patch": "npm version patch && npm run build && npm publish --access=public",
+        "publish-minor": "npm version minor && npm run build && npm publish --access=public"
     },
     "typings": "./types/index.d.ts",
     "main": "./lib/index.js",
