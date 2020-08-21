@@ -1,6 +1,6 @@
 {
     "name": "kk-tools",
-    "version": "0.2.3",
+    "version": "0.2.2",
     "author": "kunfan96",
     "description": "The library like lodash with typescript",
     "keywords": [
@@ -15,7 +15,7 @@
         "publish-patch": "npm version patch && npm run build && npm publish --access=public",
         "publish-minor": "npm version minor && npm run build && npm publish --access=public"
     },
-    "typings": "./types/*.d.ts",
+    "typings": "./types/index.d.ts",
     "main": "./lib/index.js",
     "devDependencies": {
         "@babel/core": "^7.11.1",
