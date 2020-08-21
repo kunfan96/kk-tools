@@ -15,7 +15,7 @@
         "publish-patch": "npm version patch && npm run build && npm publish --access=public",
         "publish-minor": "npm version minor && npm run build && npm publish --access=public"
     },
-    "typings": "./types/index.d.ts",
+    "typings": "./types/*.d.ts",
     "main": "./lib/index.js",
     "devDependencies": {
         "@babel/core": "^7.11.1",
