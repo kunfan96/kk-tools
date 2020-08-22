@@ -1,1 +1,4 @@
-export function fill<T>(array: Array<T>, value: any, start?:number, end?:number):Array<T>
+declare const _default: {
+    fill: import("./types/Array").Ifill;
+};
+export default _default;

@@ -1,5 +1,7 @@
 /**
- * feature: fill values by specify position in Array
+ * @name: fill
+ * @function: fill values by specify position in Array
+ * @extends: Array
  * 
  * @param initialValue Array initialed Array
  * @param value any filled value
@@ -7,8 +9,9 @@
  * @param endIndex filled Number end index
  * @return Array
  */
+import {Ifill} from '../types/Array'
 
-const fill = <T>(initialValue: Array<T>, value: any, startIndex:number = 0, endIndex:number = initialValue.length - 1):Array<T> => {    
+const fill:Ifill = <T, F>(initialValue: Array<T>, value: F, startIndex = 0, endIndex = initialValue.length - 1): Array<T|F>  => {    
     if (startIndex > endIndex) endIndex = startIndex
 
     /*----------------------------------------------*/
@@ -21,7 +24,7 @@ const fill = <T>(initialValue: Array<T>, value: any, startIndex:number = 0, endI
     if (endIndex < 0) startIndex = endIndex = 0
 
     /*----------------------------------------------*/
-    let replaceValue = []
+    let replaceValue:Array<T | F> = []
     initialValue.forEach((item:T, index) => {
         replaceValue.push((index >= startIndex && index <= endIndex) ? value : item)
     })

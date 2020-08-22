@@ -9,9 +9,11 @@
         "typescript"
     ],
     "scripts": {
-        "build": "npm run test && npm run build-only",
-        "build-only": "rollup --config",
         "test": "jest --config ./jest.config.js",
+        "clean": "rimraf ./types ./dist ./lib",
+        "cp-ts": "npx tsc --module commonjs",
+        "build-only": "npm run clean && npm run cp-ts && rollup --config",
+        "build": "npm run test && npm run build-only",
         "publish-patch": "npm version patch && npm run build && npm publish --access=public",
         "publish-minor": "npm version minor && npm run build && npm publish --access=public"
     },
@@ -24,8 +26,10 @@
         "@types/jest": "^26.0.10",
         "babel-plugin-external-helpers": "^6.22.0",
         "jest": "^26.4.0",
+        "rimraf": "^3.0.2",
         "rollup": "^2.26.3",
         "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-typescript2": "^0.27.2",
         "rollup-plugin-uglify": "^6.0.4",
         "ts-jest": "^26.2.0"
     },

@@ -1,5 +1,5 @@
 import babel from "rollup-plugin-babel";
-import rpt from '@rollup/plugin-typescript';
+import rpt from 'rollup-plugin-typescript2';
 import { uglify } from "rollup-plugin-uglify"
 
 const targetOptions = [
@@ -16,9 +16,14 @@ const buildResult = targetOptions.map(target => {
         output: target,
         plugins: [
             babel({
-                exclude:  "node_modules/**",
-            }),
-            rpt(),
+                exclude: 'node_modules/**'
+              }),
+            rpt(
+                {
+                    tsconfig: 'tsconfig.json',
+                    useTsconfigDeclarationDir: true
+                }
+            ),
             uglify(),
         ],
     }
