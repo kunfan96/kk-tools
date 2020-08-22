@@ -1,6 +1,6 @@
 {
     "name": "kk-tools",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "author": "kunfan96",
     "description": "The library like lodash with typescript",
     "keywords": [
