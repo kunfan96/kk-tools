@@ -3,6 +3,7 @@
     "version": "0.2.5",
     "author": "kunfan96",
     "description": "The library like lodash with typescript",
+    "homepage": "https://github.com/kunfan96/kk-tools",
     "keywords": [
         "lodash",
         "tools-function",
