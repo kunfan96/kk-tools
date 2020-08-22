@@ -10,12 +10,13 @@
         "typescript"
     ],
     "scripts": {
+        "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
         "dev:watch": "rollup --config --watch",
         "test": "jest --config ./jest.config.js",
         "clean": "rimraf ./types ./dist ./lib",
         "cp-ts": "npx tsc --module commonjs",
-        "build-only": "npm run clean && npm run cp-ts && rollup --config",
-        "build": "npm run test && npm run build-only",
+        "build-only": "npm run clean && npm run lint && npm run cp-ts && rollup --config",
+        "build": "npm run clean && npm run lint && npm run test && npm run cp-ts && rollup --config",
         "publish-patch": "npm version patch && npm run build && npm publish --access=public",
         "publish-minor": "npm version minor && npm run build && npm publish --access=public"
     },
@@ -26,7 +27,11 @@
         "@babel/preset-env": "^7.11.0",
         "@rollup/plugin-typescript": "^5.0.2",
         "@types/jest": "^26.0.10",
+        "@typescript-eslint/eslint-plugin": "^3.9.1",
+        "@typescript-eslint/parser": "^3.9.1",
         "babel-plugin-external-helpers": "^6.22.0",
+        "eslint": "^7.7.0",
+        "eslint-plugin-jest": "^23.20.0",
         "jest": "^26.4.0",
         "rimraf": "^3.0.2",
         "rollup": "^2.26.3",
