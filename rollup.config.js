@@ -14,6 +14,9 @@ const buildResult = targetOptions.map(target => {
     return {
         input: "src/index.ts",
         output: target,
+        watch: {
+            exclude: 'node_modules/**'
+        },
         plugins: [
             babel({
                 exclude: 'node_modules/**'
