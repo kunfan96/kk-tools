@@ -3,9 +3,5 @@ node_js:
   - 13
 install:
   - yarn
-before_script:
-  - "echo "start build target""
 script:
   - npm run build
-after_script:
-  - "echo "build success""
