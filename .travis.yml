@@ -1,18 +1,3 @@
 language: node_js
-sudo: true
 node_js:
-  -8
-branchs:
-  only:
-    -master
-cache:
-  directories:
-    -node_modules
-before_install:
-  -echo('ready install')
-install:
-  -npm install
-scripts:
-  -npm run build-only
-after_success:
-  -echo("test success")
+  - 7
