@@ -31,7 +31,6 @@ const fill: Ifill = <T, F>(
 
     /*----------------------------------------------*/
     const replaceValue: Array<T | F> = []
-
     initialValue.forEach((item: T, index) => {
         replaceValue.push(
             index >= startIndex && index <= endIndex ? value : item
