@@ -2,12 +2,12 @@ language: node_js
 node_js:
   - 13
 before_install:
-  echo('ready install')
+  - echo('ready install')
 install:
-  npm i
+  - npm i
 before_script:
-  echo('success install')
+  - echo('success install')
 script:
-  npm run build-only
+  - npm run build-only
 after_script:
-  echo('success build')
+  - echo('success build')
